@@ -1,0 +1,40 @@
+.form {
+    display: block;
+    padding: 20px;
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid;
+    border-radius: 5px;
+    height: max-content;
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+}
+
+.form input {
+    margin: 10px auto;
+    display: block;
+    padding: 5px 10px;
+    outline: none;
+    transition: border-color .4s ease;
+    border: 3px solid transparent;
+    width: 90%;
+}
+
+.form input:focus {
+    border-color: lightblue;
+}
+
+form input::placeholder, textarea::placeholder {
+    text-align: center;
+}
+
+.buttonsBlock {
+    position: relative;
+    height: 100%;
+    margin-top: 20px;
+    align-content: center;
+}
+

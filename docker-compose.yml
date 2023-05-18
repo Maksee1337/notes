@@ -1,0 +1,43 @@
+version: '3.0'
+
+services:
+  back:
+    container_name: main
+    build:
+      context: ./back
+    env_file:
+      - back/.env.docker
+    ports:
+      - "3000:3000"
+#      - "9229:9229"
+    environment:
+      - NODE_ENV=production
+    command: npm run start:prod
+    depends_on:
+      - postgres
+
+  front:
+    container_name: front
+    build:
+      context: ./front
+    ports:
+      - "80:3000"
+    command: serve -s dist
+    depends_on:
+      - back
+
+  postgres:
+    container_name: postgres
+    image: postgres:12.1-alpine
+    restart: always
+    env_file:
+      - ./back/.env.docker
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:

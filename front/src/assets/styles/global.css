@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 800px;
+
+}
+
+body {
+    background-color: gray;
+    color: bisque;
+}

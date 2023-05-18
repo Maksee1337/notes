@@ -1,0 +1,18 @@
+.btn {
+    margin: 5px 10px;
+    text-align: center;
+    border: 2px solid ;
+    border-radius: 5px;
+    padding: 5px;
+    height: max-content;
+    cursor: pointer;
+    background-color: gray;
+    color: bisque ;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: bisque;
+    color: gray;
+    border-color: blanchedalmond;
+}

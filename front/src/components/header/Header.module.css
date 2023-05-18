@@ -1,0 +1,14 @@
+.userBlock {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    /*height: 50px;*/
+}
+
+.userInfo {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+}
